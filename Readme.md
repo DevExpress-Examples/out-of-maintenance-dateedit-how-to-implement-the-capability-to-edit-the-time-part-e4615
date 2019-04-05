@@ -2,9 +2,9 @@
 *Files to look at*:
 
 * **[DateTimeEdit.xaml](./CS/DateTimeEditProiect/DateTimeEdit.xaml) (VB: [DateTimeEdit.xaml](./VB/DateTimeEditProiect/DateTimeEdit.xaml))**
-* [DateTimeEdit.xaml.cs](./CS/DateTimeEditProiect/DateTimeEdit.xaml.cs) (VB: [DateTimeEdit.xaml](./VB/DateTimeEditProiect/DateTimeEdit.xaml))
+* [DateTimeEdit.xaml.cs](./CS/DateTimeEditProiect/DateTimeEdit.xaml.cs) (VB: [DateTimeEdit.xaml.vb](./VB/DateTimeEditProiect/DateTimeEdit.xaml.vb))
 * [MainWindow.xaml](./CS/DateTimeEditProiect/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DateTimeEditProiect/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/DateTimeEditProiect/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/DateTimeEditProiect/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/DateTimeEditProiect/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DateTimeEditProiect/MainWindow.xaml.vb))
 <!-- default file list end -->
 # DateEdit - How to implement the capability to edit the time part
 
