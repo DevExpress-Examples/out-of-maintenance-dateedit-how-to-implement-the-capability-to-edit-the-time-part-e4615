@@ -1,20 +1,29 @@
-<!-- default file list -->
-*Files to look at*:
-
-* [DateTimeEdit.xaml](./CS/DateTimeEditProiect/DateTimeEdit.xaml) (VB: [DateTimeEdit.xaml](./VB/DateTimeEditProiect/DateTimeEdit.xaml))
-* [DateTimeEdit.xaml.cs](./CS/DateTimeEditProiect/DateTimeEdit.xaml.cs) (VB: [DateTimeEdit.xaml.vb](./VB/DateTimeEditProiect/DateTimeEdit.xaml.vb))
-* [MainWindow.xaml](./CS/DateTimeEditProiect/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DateTimeEditProiect/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/DateTimeEditProiect/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DateTimeEditProiect/MainWindow.xaml.vb))
-<!-- default file list end -->
 # DateEdit - How to implement the capability to edit the time part
 
+In version **19.2** of our controls, we created [DateEditNavigatorWithTimePickerStyleSettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.DateEditNavigatorWithTimePickerStyleSettings) and [DateEditTimePickerStyleSettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.DateEditTimePickerStyleSettings) that you can use in your DateEdit's [StyleS](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.BaseEdit.StyleSettings)[ettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.BaseEdit.StyleSettings) property to allow end users to change the time part in the popup:
 
-<p>To implement the aforementioned capability, you can create a DateEdit descendant as shown below.</p><br />
-<p>Add two properties to this descendant:</p><br />
-<p>1. IsShowTimePanel, which determines whether or not the edit time panel should be shown. Type - Boolean. Default value - false.</p><br />
-<p>2. TimeFormat, which determines the time format. Type - enumTimeFormat (declare in code).</p><p>Possible values:</p><p>H12 - 12 hours format.</p><p>H24 - 24 hours format.</p><p>Auto - your regional settings format.</p><br />
-<p>Default value - Auto.</p>
+```xaml
+<dxe:DateEdit
+    Mask="G"
+    MaskUseAsDisplayFormat="True"
+    MinValue="02/28/2019"
+    MaxValue="02/20/2020">
+    <dxe:DateEdit.StyleSettings>
+        <dxe:DateEditNavigatorWithTimePickerStyleSettings />
+    </dxe:DateEdit.StyleSettings>
+</dxe:DateEdit>
+```
 
-<br/>
+```xaml
+<dxe:DateEdit
+    Mask="T"
+    MaskUseAsDisplayFormat="True"
+    MinValue="02/28/2019"
+    MaxValue="02/20/2020">
+    <dxe:DateEdit.StyleSettings>
+        <dxe:DateEditTimePickerStyleSettings />
+    </dxe:DateEdit.StyleSettings>
+</dxe:DateEdit>
+```
 
-
+Use these objects in your application if you use version **19.2 or newer**. In versions **prior** to 19.2, use the approach that we illustrated in other branches of this example.
